@@ -8,6 +8,11 @@ project(RieszFrameLib VERSION 0.1 LANGUAGES CXX
   DESCRIPTION "Frames Library and Executables for Testing"
 )
 
+if(NOT MSVC)
+  set(CMAKE_CXX_STANDARD 20)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)  
+endif(NOT MSVC)
+
 # Set a default build type if none was specified
 set(default_build_type "RelWithDebInfo") 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
