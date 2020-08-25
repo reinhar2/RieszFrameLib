@@ -74,7 +74,7 @@ endif()
 
 # Math
 if (UNIX) 
-  find_library(MATHLIB m)
+  set(MATHLIB "m")
 else()
   set(MATHLIB "")
 endif()
